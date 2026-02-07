@@ -8,10 +8,12 @@ const inputTodo = ref('')
 //   todo.value = `hello ${inputTodo.value}`
 // }
 
-const todos = ref([1, 3, 4])
+const todos = ref([])
 
 const addTask = () => {
   // here we add a task to the array
+  todos.value.push(inputTodo)
+  inputTodo.value = ''
 }
 </script>
 
@@ -19,7 +21,7 @@ const addTask = () => {
   <div class="todo-container">
     <div class="user-input">
       <input type="text" v-model="inputTodo" />
-      <button @click="check">Add</button>
+      <button @click="addTask">Add</button>
     </div>
     <!-- <div class="greet-user">
       <h1>{{ todo }}</h1>
