@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 
-const todo = ref('')
+// const todo = ref('')
 const inputTodo = ref('')
 
-const check = () => {
-  todo.value = `hello ${inputTodo.value}`
-}
+// const check = () => {
+//   todo.value = `hello ${inputTodo.value}`
+// }
 </script>
 
 <template>
@@ -15,8 +15,13 @@ const check = () => {
       <input type="text" v-model="inputTodo" />
       <button @click="check">Add</button>
     </div>
-    <div class="greet-user">
+    <!-- <div class="greet-user">
       <h1>{{ todo }}</h1>
+    </div> -->
+    <div class="to-do-list">
+      <ul>
+        <li v-for="todo in todos"></li>
+      </ul>
     </div>
   </div>
 </template>
