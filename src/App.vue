@@ -15,6 +15,10 @@ const addTask = () => {
   todos.value.push(inputTodo.value)
   inputTodo.value = ''
 }
+
+const removeTodo = () => {
+  // here is the logic for removing an array
+}
 </script>
 
 <template>
@@ -29,6 +33,7 @@ const addTask = () => {
     <div class="to-do-list">
       <ul>
         <li v-for="todo in todos" :key="todo">{{ todo }}</li>
+        <button @click="removeTodo">x</button>
       </ul>
     </div>
   </div>
