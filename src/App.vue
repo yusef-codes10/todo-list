@@ -12,7 +12,7 @@ const todos = ref([])
 
 const addTask = () => {
   // here we add a task to the array
-  todos.value.push(inputTodo)
+  todos.value.push(inputTodo.value)
   inputTodo.value = ''
 }
 </script>
