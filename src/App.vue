@@ -12,6 +12,7 @@ const todos = ref([])
 
 const addTask = () => {
   // here we add a task to the array
+  if (inputTodo.value.trim() === '') return
   todos.value.push(inputTodo.value)
   inputTodo.value = ''
 }
@@ -32,8 +33,10 @@ const removeTodo = () => {
     </div> -->
     <div class="to-do-list">
       <ul>
-        <li v-for="todo in todos" :key="todo">{{ todo }}</li>
-        <button @click="removeTodo">x</button>
+        <li v-for="todo in todos" :key="todo">
+          <span>{{ todo }}</span>
+          <button @click="removeTodo">x</button>
+        </li>
       </ul>
     </div>
   </div>
