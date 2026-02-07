@@ -19,6 +19,7 @@ const addTask = () => {
 
 const removeTodo = () => {
   // here is the logic for removing an array
+  todos.value.pop()
 }
 </script>
 
