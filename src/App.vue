@@ -20,7 +20,7 @@ const inputTodo = ref('')
     </div> -->
     <div class="to-do-list">
       <ul>
-        <li v-for="todo in todos"></li>
+        <li v-for="todo in todos" :key="todo"></li>
       </ul>
     </div>
   </div>
