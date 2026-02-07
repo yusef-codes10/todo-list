@@ -1,7 +1,12 @@
 <script setup></script>
 
 <template>
-  <h1>You did it!</h1>
+  <div class="todo-container">
+    <div class="user-input">
+      <input type="text" />
+      <button>Add</button>
+    </div>
+  </div>
 </template>
 
 <style scoped></style>
