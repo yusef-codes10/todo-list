@@ -7,6 +7,12 @@ const inputTodo = ref('')
 // const check = () => {
 //   todo.value = `hello ${inputTodo.value}`
 // }
+
+const todos = ref([1, 3, 4])
+
+const addTask = () => {
+  // here we add a task to the array
+}
 </script>
 
 <template>
@@ -20,7 +26,7 @@ const inputTodo = ref('')
     </div> -->
     <div class="to-do-list">
       <ul>
-        <li v-for="todo in todos" :key="todo"></li>
+        <li v-for="todo in todos" :key="todo">{{ todo }}</li>
       </ul>
     </div>
   </div>
