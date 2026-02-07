@@ -14,12 +14,12 @@ const addTask = () => {
   // here we add a task to the array
   if (inputTodo.value.trim() === '') return
   todos.value.push(inputTodo.value)
-  inputTodo.value = ''
+  // inputTodo.value = ''
 }
 
-const removeTodo = () => {
+const removeTodo = (index) => {
   // here is the logic for removing an array
-  todos.value.pop()
+  todos.value.splice(index, 1)
 }
 </script>
 
@@ -34,9 +34,9 @@ const removeTodo = () => {
     </div> -->
     <div class="to-do-list">
       <ul>
-        <li v-for="todo in todos" :key="todo">
+        <li v-for="(todo, index) in todos" :key="todo">
           <span>{{ todo }}</span>
-          <button @click="removeTodo">x</button>
+          <button @click="removeTodo(index)">x</button>
         </li>
       </ul>
     </div>
