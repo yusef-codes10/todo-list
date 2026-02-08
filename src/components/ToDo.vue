@@ -31,7 +31,10 @@ onMounted(async () => {
   try {
     const response = await fetch('https://jsonplaceholder.typicode.com/todos')
     const data = await response.json()
-    todos.value = data.map((todo) => todo.title)
+    todos.value = data.map((todo) => ({
+      text: todo.title,
+      isDone: todo.completed,
+    }))
   } catch (error) {
     console.log(error)
   }
