@@ -1,0 +1,21 @@
+:root {
+    --brand-color: #FFDFDB;
+    --dark-color: #000000;
+    --secondary-bg: #1A1B1B;
+    --secondary-hover: #222D32;
+    --text-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite NZ Basic", sans-serif;
+}
+
+.todo-container {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, var(--brand-color), var(--dark-color));
+}
